@@ -51,7 +51,7 @@ php artisan vendor:publish --tag=laravel-admin-summernote
 
 在form表单中使用它：
 ```php
-$form->summernote('content')->rules('require');
+$form->summernote('content');
 ```
 
 ## 支持
