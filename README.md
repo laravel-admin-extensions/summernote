@@ -43,7 +43,7 @@ php artisan vendor:publish --tag=laravel-admin-summernote
 ```php
     'config' => [
         'lang'   => 'zh-CN',
-        'hegiht' => 500,
+        'height' => 500,
     ]
 ```
 
