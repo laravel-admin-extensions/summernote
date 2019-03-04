@@ -32,7 +32,7 @@ $('#{$this->id}').summernote($config);
 
 $('#{$this->id}').on("summernote.change", function (e) {
     var html = $('#{$this->id}').summernote('code');
-    $('input[name=$name]').val(html);
+    $('input[name="{$name}"]').val(html);
 });
 
 EOT;
