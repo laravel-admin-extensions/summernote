@@ -27,15 +27,25 @@ class Editor extends Field
         ], $config));
 
         $this->script = <<<EOT
+        (function(){
+            var configs = $config;
 
-$('#{$this->id}').summernote($config);
+            if(configs['imageUploadServer']){
+                configs.callbacks = configs.callbacks || {};
+                configs.callbacks.onImageUpload = function(images){
+                    window.laravelAdminSummernoteImageUploader($('#{$this->id}'),images[0],configs.imageUploadServer,configs.imageUploadName);
+                };
+            }
 
-$('#{$this->id}').on("summernote.change", function (e) {
-    var html = $('#{$this->id}').summernote('code');
-    $('input[name="{$name}"]').val(html);
-});
+            $('#{$this->id}').summernote(configs);
 
-EOT;
+            $('#{$this->id}').on("summernote.change", function (e) {
+                var html = $('#{$this->id}').summernote('code');
+                $('input[name="{$name}"]').val(html);
+            });
+        })();
+        EOT;
+        
         return parent::render();
     }
 }

@@ -37,6 +37,9 @@ class SummernoteServiceProvider extends ServiceProvider
             if ($lang = Summernote::config('config.lang')) {
                 Admin::js("vendor/laravel-admin-ext/summernote/dist/lang/summernote-{$lang}.js");
             }
+            if (Summernote::config('config.imageUploadServer')){
+                Admin::js("vendor/laravel-admin-ext/summernote/dist/image-uploader.js");
+            }
         });
     }
 }
