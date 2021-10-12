@@ -1,9 +1,9 @@
 {
-    "name": "xiangyang.li/laravel-admin-summernote",
+    "name": "laravel-admin-ext/summernote",
     "description": "Summernote extension for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "editor"],
-    "homepage": "https://github.com/sh4wn/laravel-admin-summernote",
+    "homepage": "https://github.com/laravel-admin-ext/summernote",
     "license": "MIT",
     "authors": [
         {
