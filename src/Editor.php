@@ -44,7 +44,7 @@ class Editor extends Field
                 $('input[name="{$name}"]').val(html);
             });
         })();
-        EOT;
+EOT;
         
         return parent::render();
     }
